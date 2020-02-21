@@ -1,0 +1,40 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>
+     Welcome to: Careers By ND
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+  <ion-list (ionChange)="oncareers()">
+    <ion-list-header>
+      <ion-label>
+        Select your school to start your career journey
+      </ion-label>
+    </ion-list-header>
+  
+    <ion-item>
+      <ion-label>School</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="f">Notre Dame High School</ion-select-option>
+    
+      </ion-select>
+    </ion-item>
+
+
+  
+
+
+  </ion-list>
+</ion-content>
