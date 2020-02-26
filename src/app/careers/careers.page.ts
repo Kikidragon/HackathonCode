@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './careers.page.html',
   styleUrls: ['./careers.page.scss'],
 })
-export class CareersPage implements OnInit {
+export class CareersPage {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router: Router) {
+  }
+ontechnology(){
+  this.router.navigate(['/technology'])
   }
 
 }

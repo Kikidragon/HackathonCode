@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonTabs } from '@ionic/angular';
 
 @Component({
   selector: 'app-technology',
@@ -8,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class TechnologyPage {
 
+ @ViewChildren(IonTabs)
+  tabs:IonTabs[]
+
   constructor(private router: Router) {
   }
-ontechnology(){
-  this.router.navigate(['/technology'])
+
+get topic(){
+  return (async ()=> await this.tabs[0].getSelected())
 }
-
-
 
 }
