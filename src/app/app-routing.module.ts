@@ -5,7 +5,15 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'careers', loadChildren: () => import('./careers/careers.module').then( m => m.CareersPageModule)},
-  { path: 'technology', loadChildren: () => import('./technology/technology.module').then( m => m.TechnologyPageModule)},
+  { path: 'technology', loadChildren: () => import('./technology/technology.module').then( m => m.TechnologyPageModule)},  {
+    path: 'health',
+    loadChildren: () => import('./health/health.module').then( m => m.HealthPageModule)
+  },
+  {
+    path: 'science',
+    loadChildren: () => import('./science/science.module').then( m => m.SciencePageModule)
+  },
+
 ];
 
 @NgModule({

@@ -10,8 +10,10 @@ export class CareersPage {
 
   constructor(private router: Router) {
   }
-ontechnology(){
-  this.router.navigate(['/technology'])
+onselect(page:string){
+  this.router.navigate([`/${page}`])
   }
-
+  onhome(){
+    this.router.navigate(['/home'])
+    }
 }

@@ -9,6 +9,7 @@ import { IonTabs } from '@ionic/angular';
 })
 export class TechnologyPage {
 
+  tab:string="classes"
  @ViewChildren(IonTabs)
   tabs:IonTabs[]
 
@@ -18,5 +19,10 @@ export class TechnologyPage {
 get topic(){
   return (async ()=> await this.tabs[0].getSelected())
 }
-
+ ontab(tab:string){
+  this.tab=tab
+}
+onhome(){
+  this.router.navigate(['/home'])
+  }
 }
