@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Artist</ion-title>
+    <ion-buttons slot="start">
+      <ion-button shape="round" size="medium" color="primary" (click)="onhome()"><ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-list (ionChange)="ontechnology()"></ion-list>
+<ion-content>
+    <ion-tabs #topic> 
+      <ion-tab-bar>
+        <ion-tab-button tab="classes" [selected]="tab == 'classes'" (click)="ontab('classes')">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>Classes</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="clubs" [selected]="tab == 'clubs'" (click)="ontab('clubs')">
+          <ion-icon name="ribbon-outline"></ion-icon>
+          <ion-label>Clubs</ion-label>
+        </ion-tab-button>
+    
+      </ion-tab-bar>
+    </ion-tabs>
+    <div style="padding-left:24px; padding-right:24px">
+    <ion-text color="white" *ngIf="tab == 'classes'">
+      <h2 style="color: var(--ion-color-primary)">Classes</h2>
+      <h4 style="color: var(--ion-color-secondary)">  Basic </h4>
+      <ul>
+        <li>
+          2 years of foreign language
+        </li>
+        <li>
+          3 years of history
+        </li>
+        <li>
+          4 years of english
+        </li>
+        <li>
+          Intro to art
+        </li>
+          </ul>
+          <h4 style="color: var(--ion-color-secondary)">  Important </h4>
+          <ul>
+            <li>
+              Photography 
+            </li>
+            <li>
+              Drawing 1 + 2
+            </li>
+            <li>
+              Painting 1 + 2
+            </li>
+            <li>
+              Ceramics 1 + 2 
+            </li>
+            <li>
+              Yearbook
+            </li>
+          </ul>
+    
+      
+    </ion-text>
+    <ion-text color="white"  *ngIf="tab == 'clubs'">
+      <h2 style="color: var(--ion-color-primary)">Clubs</h2>
+      <ul>
+        <li>
+          Art club
+        </li>
+        <li>
+          Puzzle club
+        </li>
+      </ul>
+    </ion-text>
+  </div>
+      
+
+
+</ion-content>
+
